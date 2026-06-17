@@ -1,0 +1,120 @@
+<!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 d-none d-lg-flex">
+        <div class="top-left">
+
+          <span>
+            <i class="bi bi-leaf-fill"></i>
+            Eco-Friendly Laundry - Sustainable cleaning solutions
+          </span>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="top-right">
+
+          <span>
+            <i class="bi bi-clock"></i>
+            Mon - Sun: 7:00 AM - 10:00 PM
+          </span>
+
+          <span>
+            <i class="bi bi-envelope"></i>
+            info@prasadlaundry.com
+          </span>
+
+          <button
+            class="chat-btn"
+            (click)="openWhatsApp()">
+
+            Chat Now
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+  <div class="container">
+
+    <!-- Logo -->
+
+    <a class="navbar-brand" href="#">
+
+      <div class="logo-icon">
+        <i class="bi bi-leaf-fill"></i>
+      </div>
+
+      <div class="logo-text">
+
+        <span class="small-title">
+          ECO-FRIENDLY
+        </span>
+
+        <h5>Prasad Laundry</h5>
+
+      </div>
+
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarContent">
+
+      <span class="navbar-toggler-icon"></span>
+
+    </button>
+
+    <div
+      class="collapse navbar-collapse"
+      id="navbarContent">
+
+      <ul class="navbar-nav mx-auto">
+
+        @for(item of navItems; track item) {
+
+          <li class="nav-item">
+
+            <a
+              class="nav-link"
+              href="#">
+
+              {{item}}
+
+            </a>
+
+          </li>
+
+        }
+
+      </ul>
+
+      <button
+        class="contact-btn"
+        (click)="callNow()">
+
+        Get In Touch
+
+      </button>
+
+    </div>
+
+  </div>
+
+</nav>

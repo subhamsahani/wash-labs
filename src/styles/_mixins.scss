@@ -1,0 +1,46 @@
+@use './variable' as *;
+
+// Responsive breakpoints
+@mixin mobile {
+  @media (max-width: 576px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 768px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 992px) { @content; }
+}
+
+// Flex helpers
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Section padding
+@mixin section-padding {
+  padding: $section-padding-y 0;
+}
+
+// Button base
+@mixin btn-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: $radius-pill;
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: $font-size-base;
+  border: none;
+  cursor: pointer;
+  transition: $transition-base;
+  text-decoration: none;
+}

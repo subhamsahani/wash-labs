@@ -1,0 +1,33 @@
+<section class="premium-section py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">
+        ✓ &nbsp;Complete Solutions
+      </span>
+      <h2 class="section-title mt-3">
+        Premium <span class="highlight">Services</span>
+      </h2>
+      <p class="section-subtitle">
+        Everything your wardrobe needs with eco-friendly care
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="row g-4">
+      @for (service of services; track service.title) {
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="service-card">
+            <div class="icon-box">
+              <span class="icon-emoji">{{ service.icon }}</span>
+            </div>
+            <h5 class="card-title">{{ service.title }}</h5>
+            <p class="card-desc">{{ service.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

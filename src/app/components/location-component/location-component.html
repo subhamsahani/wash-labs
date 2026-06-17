@@ -1,0 +1,78 @@
+<section class="location-section py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">
+        📍 Find Us Easily
+      </span>
+      <h2 class="section-title mt-3">
+        Our <span class="highlight">Store Location</span>
+      </h2>
+      <p class="section-subtitle">
+        Visit our eco-friendly branch or enjoy our free pickup service
+      </p>
+    </div>
+
+    <!-- Map + Card Row -->
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Left: Map -->
+      <div class="col-12 col-lg-6">
+        <div class="map-wrapper" (click)="openInMaps()" title="Click to open in Google Maps">
+          <iframe
+            [src]="branch.mapEmbedUrl | safeUrl"
+            class="map-iframe"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <div class="map-overlay">
+            <span class="map-overlay-text">🗺️ Open in Google Maps</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Branch Card -->
+      <div class="col-12 col-lg-6 d-flex align-items-center">
+        <div class="branch-card w-100">
+
+          <div class="branch-header">
+            <span class="leaf-icon">🌿</span>
+            <h4 class="branch-name">{{ branch.name }}</h4>
+          </div>
+
+          <div class="branch-details">
+            <div class="detail-row">
+              <span class="detail-icon">📍</span>
+              <span class="detail-text">{{ branch.address }}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon">🕐</span>
+              <span class="detail-text">{{ branch.hours }}</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon phone-text">📞</span>
+              <span class="detail-text phone-text">{{ branch.phone }}</span>
+            </div>
+          </div>
+
+          <div class="branch-actions row g-3 mt-2">
+            <div class="col-6">
+              <button class="action-btn btn-call w-100" (click)="callBranch()">
+                📞 &nbsp; Call
+              </button>
+            </div>
+            <div class="col-6">
+              <button class="action-btn btn-whatsapp w-100" (click)="openWhatsApp()">
+                💬 &nbsp; WhatsApp
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+// ===========================
+// Brand Colors
+// ===========================
+$primary: #4a9ea1;        // teal/mint - main brand color
+$primary-light: #c8eaea;  // light mint background
+$primary-dark: #2d7a7d;   // dark teal for hover states
+$accent: #e8834a;         // orange - CTA button color
+$accent-hover: #d4703a;
+
+$dark: #1a1a2e;           // near black for headings
+$text-body: #4a5568;      // gray for body text
+$text-light: #718096;
+$white: #ffffff;
+$bg-light: #f8fffe;       // off white section bg
+
+// ===========================
+// Typography
+// ===========================
+$font-display: 'Poppins', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.125rem;
+$font-size-xl: 1.25rem;
+
+// ===========================
+// Spacing
+// ===========================
+$section-padding-y: 5rem;
+$navbar-height: 80px;
+
+// ===========================
+// Border Radius
+// ===========================
+$radius-sm: 8px;
+$radius-md: 16px;
+$radius-lg: 24px;
+$radius-pill: 50px;
+
+// ===========================
+// Shadows
+// ===========================
+$shadow-sm: 0 2px 8px rgba(74, 158, 161, 0.12);
+$shadow-md: 0 8px 24px rgba(74, 158, 161, 0.18);
+$shadow-lg: 0 16px 48px rgba(74, 158, 161, 0.22);
+
+// ===========================
+// Transitions
+// ===========================
+$transition-base: all 0.3s ease;
+$transition-slow: all 0.5s ease;

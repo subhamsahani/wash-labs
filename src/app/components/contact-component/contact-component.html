@@ -1,0 +1,29 @@
+<section class="contact-section py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <div class="text-center mb-5">
+      <h2 class="section-title">Contact Us Today</h2>
+      <p class="section-subtitle">
+        Multiple ways to reach us. We're always ready to help!
+      </p>
+    </div>
+
+    <!-- 4 Cards -->
+    <div class="row g-3 justify-content-center">
+      @for (card of cards; track card.label) {
+        <div class="col-6 col-md-3">
+          <div class="contact-card" (click)="card.action()">
+            <div class="icon-box">
+              <span class="icon-emoji">{{ card.icon }}</span>
+            </div>
+            <p class="card-label">{{ card.label }}</p>
+            <p class="card-value">{{ card.value }}</p>
+            <span class="card-action">{{ card.actionText }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>
