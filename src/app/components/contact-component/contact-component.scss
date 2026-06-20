@@ -42,14 +42,20 @@ $border-color: #c8e6de;
 
 // ── Icon ─────────────────────────────────────────────────
 .icon-box {
-  width: 52px;
-  height: 52px;
-  background-color: $green;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 16px;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
 }
 
 .icon-emoji {

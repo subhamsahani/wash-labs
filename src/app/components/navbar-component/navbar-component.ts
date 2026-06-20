@@ -17,6 +17,7 @@ export class NavbarComponent {
     { label: 'Location', route: 'location' },
     { label: 'Premium', route: 'premium' },
     { label: 'Contact', route: 'contact' },
+    { label: 'FAQ', route: 'faq' },
   ];
 
   scrollTo(sectionId: string) {
@@ -41,7 +42,7 @@ export class NavbarComponent {
   }
 
   callNow() {
-    window.location.href = 'tel:+91⁠8147751900';
+    window.location.href = 'tel:+91⁠⁠8147751900';
   }
 
   openWhatsApp() {

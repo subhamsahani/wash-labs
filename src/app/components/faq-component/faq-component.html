@@ -1,0 +1,39 @@
+<section class="faq-section py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">
+        <i class="bi bi-question-circle me-1"></i> Got Questions?
+      </span>
+      <h2 class="section-title mt-3">
+        Frequently Asked <span class="highlight">Questions</span>
+      </h2>
+      <p class="section-subtitle">
+        Everything you need to know about our laundry &amp; dry cleaning services
+      </p>
+    </div>
+
+    <div class="faq-grid">
+      @for (faq of faqs; track faq.question; let i = $index) {
+        <div class="faq-item" [class.faq-open]="faq.isOpen">
+          <button
+            class="faq-question"
+            (click)="toggleFaq(i)"
+            [attr.aria-expanded]="faq.isOpen">
+            <i class="bi bi-chevron-down chevron-icon" [class.rotated]="faq.isOpen"></i>
+            <span>{{ faq.question }}</span>
+          </button>
+
+          <div class="faq-answer-wrapper" [class.expanded]="faq.isOpen">
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                <p>{{ faq.answer }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

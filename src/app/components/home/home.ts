@@ -7,6 +7,7 @@ import { LocationComponent } from '../../components/location-component/location-
 import { PremiumServicesComponent } from '../../components/premium-services-component/premium-services-component';
 import { ContactComponent } from '../../components/contact-component/contact-component';
 import { FooterComponent } from '../../components/footer-component/footer-component';
+import { FaqComponent } from '../faq-component/faq-component';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import { FooterComponent } from '../../components/footer-component/footer-compon
     LocationComponent,
     PremiumServicesComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    FaqComponent
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'

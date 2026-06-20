@@ -17,43 +17,55 @@
     <!-- Cards Grid -->
     <div class="row g-4">
       @for (pkg of packages; track pkg.title) {
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="service-card" [class.popular-card]="pkg.isPopular">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="service-card h-100 d-flex flex-column" [class.popular-card]="pkg.isPopular">
 
             <!-- Popular Badge -->
             @if (pkg.isPopular) {
               <div class="popular-badge">POPULAR</div>
             }
 
-            <!-- Card Header (Green) -->
-            <div class="card-header-green">
-              <h5 class="card-title">{{ pkg.title }}</h5>
-              <p class="card-subtitle-text">{{ pkg.subtitle }}</p>
-              <div class="price-block">
-                <span class="price-main" [class.custom-price]="pkg.isCustomPrice">
-                  {{ pkg.price }}
-                </span>
-                <span class="price-unit"> {{ pkg.unit }}</span>
-              </div>
+            <!-- Icon -->
+            <div class="card-icon-wrap">
+              <img [src]="pkg.icon" [alt]="pkg.title" class="card-icon" />
             </div>
 
-            <!-- Card Body (White) -->
-            <div class="card-body-white">
-              <ul class="feature-list">
-                @for (feature of pkg.features; track feature) {
-                  <li class="feature-item">
-                    <span class="check-icon">✓</span>
-                    {{ feature }}
-                  </li>
-                }
-              </ul>
+            <!-- Title -->
+            <h5 class="card-title text-center">{{ pkg.title }}</h5>
+            <p class="card-subtitle-text text-center">{{ pkg.subtitle }}</p>
+            <p class="card-description text-center">{{ pkg.description }}</p>
 
-              <button
-                class="order-btn w-100"
-                [class.btn-pink]="pkg.isPinkButton" (click)="goToPricingPage()">
-                {{ pkg.buttonText }}
-              </button>
+            <div class="card-divider"></div>
+
+            <!-- Info Rows -->
+            <div class="info-row">
+              <span class="info-label">
+                <i class="bi bi-clock-history"></i> Delivery in
+              </span>
+              <span class="info-value">{{ pkg.deliveryDays }}</span>
             </div>
+
+            <div class="info-row price-row">
+              <span class="info-label">Price per {{ pkg.priceUnit }}</span>
+              <span class="info-value price-value">₹{{ pkg.price }}</span>
+            </div>
+
+            <div class="info-row">
+              <span class="info-label">Minimum billing</span>
+              <span class="info-value">₹{{ pkg.minBilling }}</span>
+            </div>
+
+            <div class="pickup-row">
+              <i class="bi bi-leaf-fill"></i> Free Pick &amp; Drop
+            </div>
+
+            <!-- Button -->
+            <button
+              class="order-btn w-100 mt-auto"
+              [class.btn-pink]="pkg.isPinkButton"
+              (click)="goToPricingPage()">
+              {{ pkg.buttonText }}
+            </button>
 
           </div>
         </div>

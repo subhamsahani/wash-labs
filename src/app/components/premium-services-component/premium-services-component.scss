@@ -56,8 +56,8 @@ $text-muted: #4a6670;
 
 // ── Icon Box ─────────────────────────────────────────────
 .icon-box {
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   background-color: $green;
   border-radius: 12px;
   display: flex;
@@ -66,9 +66,10 @@ $text-muted: #4a6670;
   margin-bottom: 18px;
 }
 
-.icon-emoji {
-  font-size: 1.4rem;
-  line-height: 1;
+.service-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
 }
 
 // ── Text ─────────────────────────────────────────────────

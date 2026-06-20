@@ -15,7 +15,7 @@
         <div class="col-6 col-md-3">
           <div class="contact-card" (click)="card.action()">
             <div class="icon-box">
-              <span class="icon-emoji">{{ card.icon }}</span>
+              <img [src]="card.icon" class="contact-icon" [alt]="card.label" />
             </div>
             <p class="card-label">{{ card.label }}</p>
             <p class="card-value">{{ card.value }}</p>

@@ -20,7 +20,7 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="service-card">
             <div class="icon-box">
-              <span class="icon-emoji">{{ service.icon }}</span>
+              <img [src]="service.icon" class="service-icon" alt="{{ service.title }}" />
             </div>
             <h5 class="card-title">{{ service.title }}</h5>
             <p class="card-desc">{{ service.description }}</p>

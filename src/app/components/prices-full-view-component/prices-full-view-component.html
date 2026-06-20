@@ -11,79 +11,76 @@
 
     @for(card of pricingCards; track card.title) {
 
-      <div class="col-lg-4 col-md-6">
+    <div class="col-lg-4 col-md-6">
 
-        <div class="pricing-card">
+      <div class="pricing-card">
 
-          <div class="card-top">
+        <div class="card-top">
 
-            <img
-              [src]="card.image"
-              [alt]="card.title"
-              class="service-image">
+          <img [src]="card.image" [alt]="card.title" class="service-image">
 
-            <h4>{{ card.title }}</h4>
+          <h4>{{ card.title }}</h4>
 
-            <p class="description">
-              {{ card.description }}
-            </p>
+          <p class="description">
+            {{ card.description }}
+          </p>
 
-            <div class="delivery-time">
-              {{ card.deliveryTime }}
-            </div>
+          <div class="delivery-time">
+            {{ card.deliveryTime }}
+          </div>
 
-            <div class="tag-wrapper">
+          <div class="tag-wrapper">
 
-              @for(tag of card.tags; track tag) {
+            @for(tag of card.tags; track tag) {
 
-                <span class="service-tag">
-                  {{ tag }}
-                </span>
+            <span class="service-tag">
+              {{ tag }}
+            </span>
 
-              }
-
-            </div>
+            }
 
           </div>
 
-          @if(card.pricePerKg) {
+        </div>
 
-            <div class="pricing-footer">
+        @if(card.pricePerKg) {
 
-              <div>
-                <small>PRICE PER KG</small>
-                <h5>₹{{ card.pricePerKg }}</h5>
-              </div>
+        <div class="pricing-footer">
 
-              <div>
-                <small>MINIMUM BILLING</small>
-                <h5>₹{{ card.minimumBilling }}</h5>
-              </div>
+          <div>
+            <small>PRICE PER KG</small>
+            <h5>₹{{ card.pricePerKg }}</h5>
+          </div>
 
-            </div>
+          <div>
+            <small>MINIMUM BILLING</small>
+            <h5>₹{{ card.minimumBilling }}</h5>
+          </div>
 
-          }
+        </div>
 
-          @if(card.itemPrices?.length) {
+        }
 
-            <div class="item-prices">
+        @if(card.itemPrices?.length) {
 
-              @for(item of card.itemPrices; track item.item) {
+        <div class="item-prices">
 
-                <div class="price-row">
-                  <span>{{ item.item }}</span>
-                  <span>₹{{ item.price }}</span>
-                </div>
+          @for(item of card.itemPrices; track item.item) {
 
-              }
-
-            </div>
+          <div class="price-row">
+            <span>{{ item.item }}</span>
+            <span>₹{{ item.price }}</span>
+          </div>
 
           }
 
         </div>
 
+        }
+
       </div>
+
+    </div>
 
     }
 

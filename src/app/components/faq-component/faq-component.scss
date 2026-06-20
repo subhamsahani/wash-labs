@@ -1,0 +1,124 @@
+$blue: #2ec4a0;
+$text-dark: #1a2332;
+$text-muted: #6b7780;
+$bg-open: #dff0eb;
+
+.faq-section {
+  background-color: #fff;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  border: 1.5px solid $blue;
+  color: $blue;
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background-color: rgba(43, 127, 214, 0.08);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: $text-dark;
+
+  .highlight {
+    color: $blue;
+  }
+}
+
+.section-subtitle {
+  color: $text-muted;
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+// ── Grid ───────────────────────────────────────────────
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 32px;
+  row-gap: 8px;
+  align-items: start;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Item ───────────────────────────────────────────────
+.faq-item {
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+
+  &.faq-open {
+    background-color: $bg-open;
+  }
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 16px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: $text-dark;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover span {
+    color: $blue;
+  }
+}
+
+.chevron-icon {
+  color: $blue;
+  font-size: 0.85rem;
+  margin-top: 4px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+
+  &.rotated {
+    transform: rotate(180deg);
+  }
+}
+
+// ── Smooth expand/collapse ───────────────────────────────
+.faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows 0.3s ease;
+
+  &.expanded {
+    grid-template-rows: 1fr;
+  }
+}
+
+.faq-answer {
+  overflow: hidden;
+  min-height: 0;   // no padding here anymore — this is what truly hits 0px
+}
+
+.faq-answer-inner {
+  padding: 0 16px 18px 44px;   // padding lives one level deeper now
+
+  p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: $text-muted;
+    line-height: 1.6;
+  }
+}

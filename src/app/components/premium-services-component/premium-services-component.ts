@@ -16,40 +16,22 @@ interface PremiumService {
 export class PremiumServicesComponent {
   services: PremiumService[] = [
     {
-      icon: '🫧',
+      icon: 'pricing/wash-and-dry.png',
       title: 'Regular Washing',
       description:
         'Everyday clothes washing with gentle eco-friendly detergents. Perfect for cotton & synthetic wear. 48-hour turnaround.',
     },
     {
-      icon: '✨',
+      icon: 'pricing/suits.png',
       title: 'Dry Cleaning',
       description:
         'Professional dry-cleaning for delicate fabrics, formal wear & special garments. Expert stain removal with eco-safe solvents.',
     },
     {
-      icon: '🚚',
+      icon: 'pricing/delivery-bike.png',
       title: 'Free Pickup & Delivery',
       description:
         'Convenient doorstep service. Schedule pickup & delivery as per your convenience with real-time tracking.',
-    },
-    {
-      icon: '👔',
-      title: 'Professional Ironing',
-      description:
-        'Expert pressing for crisp, wrinkle-free finish. Steam ironing, light ironing, and heavy ironing options available.',
-    },
-    {
-      icon: '👟',
-      title: 'Shoe Cleaning & Care',
-      description:
-        'Deep cleaning, whitening, deodorizing, and leather care for all shoe types. Specialized treatment for different materials.',
-    },
-    {
-      icon: '🛡️',
-      title: '100% Quality Guarantee',
-      description:
-        '100% satisfaction guaranteed. Professional handling, careful inspection, and premium packaging for all garments.',
-    },
+    }
   ];
 }

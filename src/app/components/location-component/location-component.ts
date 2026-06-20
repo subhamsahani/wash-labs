@@ -20,12 +20,11 @@ interface Branch {
 export class LocationComponent {
   branch: Branch = {
     name: 'Washlab Laundry - Main Branch',
-    address: '4th Cross, S.G. Palya, Bengaluru 560029',
+    address: '⁠1830,41, st cross, 26th Main Rd, Putlanpalya, Jayanagara 9th Block, Jayanagar, Bengaluru, Karnataka 560041',
     hours: 'Mon–Sun: 7:00 AM – 10:00 PM',
-    phone: '+91 98765 43210',
+    phone: '+91 ⁠81477 51900',
     // Replace YOUR_API_KEY with actual key, or use a public embed link
-    mapEmbedUrl:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.5946!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE3LjgiTiA3N8KwMzUnNDAuNiJF!5e0!3m2!1sen!2sin!4v1234567890',
+    mapEmbedUrl: 'https://www.google.com/maps?q=1830%2C41%2C%20st%20cross%2C%2026th%20Main%20Rd%2C%20Putlanpalya%2C%20Jayanagara%209th%20Block%2C%20Jayanagar%2C%20Bengaluru%2C%20Karnataka%20560041&output=embed',
     mapDirectionsUrl:
       'https://www.google.com/maps/dir/?api=1&destination=12.9716,77.5946',
   };

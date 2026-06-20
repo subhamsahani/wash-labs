@@ -1,14 +1,19 @@
-$green: #2ec4a0;          // teal-green from hero navbar/buttons
+$green: #2ec4a0;
 $green-dark: #25a888;
 $pink: #e0496a;
 $pink-dark: #c73d5c;
-$text-dark: #1a2332;      // dark navy from hero headings
-$text-muted: #4a6670;
-$border-light: #c8e6de;
+$blue: #3aa0d8;
+$text-dark: #1a2332;
+$text-muted: #6b8088;
+$border-light: #e3eeec;
+$card-border: #dcebe7;   // border color for cards
+
+$accent-1-bg: #d9f0eb;   // green tint
+$accent-2-bg: #fbdde6;   // pink tint
+$accent-3-bg: #d6ecf9;   // blue tint
 
 .services-section {
-//   background-color: #dff0eb;   // mint background matching hero
-  background-color: #fff;   // mint background matching hero
+  background-color: #fff;
 }
 
 // ── Header ──────────────────────────────────────────────
@@ -44,24 +49,31 @@ $border-light: #c8e6de;
 
 // ── Card ────────────────────────────────────────────────
 .service-card {
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 2px 16px rgba(30, 120, 100, 0.10);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative;
+  border-radius: 18px;
+  padding: 28px 24px 24px;
   background: #fff;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  border: 1px solid $card-border;
+  box-shadow: 0 2px 16px rgba(30, 120, 100, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 28px rgba(30, 120, 100, 0.18);
+    box-shadow: 0 8px 28px rgba(30, 120, 100, 0.16);
+    border-color: rgba(46, 196, 160, 0.4);
   }
 
   &.popular-card {
-    box-shadow: 0 4px 24px rgba(46, 196, 160, 0.30);
+    box-shadow: 0 4px 24px rgba(46, 196, 160, 0.28);
+    border: 1.5px solid $green;
   }
+}
+
+// Cycle icon background only — price color stays consistent (see .price-value below)
+.col-12 {
+  &:nth-of-type(3n + 1) .card-icon-wrap { background-color: $accent-1-bg; }
+  &:nth-of-type(3n + 2) .card-icon-wrap { background-color: $accent-2-bg; }
+  &:nth-of-type(3n + 3) .card-icon-wrap { background-color: $accent-3-bg; }
 }
 
 // ── Popular Badge ────────────────────────────────────────
@@ -79,86 +91,94 @@ $border-light: #c8e6de;
   z-index: 2;
 }
 
-// ── Green Header ─────────────────────────────────────────
-.card-header-green {
-  background-color: $green;
-  padding: 28px 24px 24px;
-  color: #fff;
-  text-align: center;
+// ── Icon ──────────────────────────────────────────────────
+.card-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
 }
 
+.card-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+// ── Text ──────────────────────────────────────────────────
 .card-title {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
+  color: $text-dark;
   margin-bottom: 2px;
-  color: #fff;
 }
 
 .card-subtitle-text {
-  font-size: 0.82rem;
-  opacity: 0.85;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $text-muted;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  font-size: 0.85rem;
+  color: $text-muted;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  min-height: 42px;
+}
+
+.card-divider {
+  height: 1px;
+  background-color: $border-light;
   margin-bottom: 14px;
 }
 
-.price-block {
+// ── Info Rows ───────────────────────────────────────────
+.info-row {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 2px;
-}
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 0.84rem;
+  color: $text-dark;
 
-.price-main {
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1;
+  .info-label {
+    color: $text-muted;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+  }
 
-  &.custom-price {
-    font-size: 1.8rem;
+  .info-value {
+    font-weight: 700;
+  }
+
+  &.price-row {
+    .price-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: $green;   // always mint green, no cycling
+    }
   }
 }
 
-.price-unit {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  font-weight: 400;
-}
-
-// ── White Body ───────────────────────────────────────────
-.card-body-white {
-  padding: 24px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  background: #fff;
-}
-
-.feature-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px 0;
-  flex: 1;
-}
-
-.feature-item {
+// ── Pickup row ────────────────────────────────────────────
+.pickup-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 0;
-  font-size: 0.88rem;
-  color: $text-dark;
-  border-bottom: 1px solid $border-light;
-
-  &:last-child {
-    border-bottom: none;
-  }
-}
-
-.check-icon {
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
   color: $green;
-  font-weight: 700;
-  font-size: 0.85rem;
-  flex-shrink: 0;
+  margin: 14px 0 18px;
 }
 
 // ── Buttons ──────────────────────────────────────────────
