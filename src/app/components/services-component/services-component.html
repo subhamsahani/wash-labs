@@ -50,7 +50,7 @@
 
               <button
                 class="order-btn w-100"
-                [class.btn-pink]="pkg.isPinkButton">
+                [class.btn-pink]="pkg.isPinkButton" (click)="goToPricingPage()">
                 {{ pkg.buttonText }}
               </button>
             </div>

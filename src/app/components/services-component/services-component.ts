@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 interface ServicePackage {
   title: string;
@@ -15,11 +16,20 @@ interface ServicePackage {
 
 @Component({
   selector: 'app-services-component',
-  imports: [CommonModule],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './services-component.html',
   styleUrl: './services-component.scss',
 })
 export class ServicesComponent {
+
+  constructor(
+    private router: Router
+  ) {
+
+  }
+
   packages: ServicePackage[] = [
     {
       title: 'Regular Wash',
@@ -27,7 +37,7 @@ export class ServicesComponent {
       price: '₹50',
       unit: '/ kg',
       features: ['Gentle washing', 'Eco-friendly detergent', 'Folding & packaging', 'Free pickup', '48-hour delivery'],
-      buttonText: 'Order Now',
+      buttonText: 'View Pricing',
     },
     {
       title: 'Premium Wash',
@@ -35,7 +45,7 @@ export class ServicesComponent {
       price: '₹80',
       unit: '/ kg',
       features: ['Hand-wash option', 'Mild detergent', 'Premium packaging', 'Free pickup & delivery', '24-hour service'],
-      buttonText: 'Order Now',
+      buttonText: 'View Pricing',
       isPopular: true,
       isPinkButton: true,
     },
@@ -45,7 +55,7 @@ export class ServicesComponent {
       price: '₹120',
       unit: '/ piece',
       features: ['Professional dry-clean', 'Stain removal', 'Eco-safe solvents', 'Premium hanger', 'Pickup & delivery'],
-      buttonText: 'Order Now',
+      buttonText: 'View Pricing',
     },
     {
       title: 'Ironing Service',
@@ -53,7 +63,7 @@ export class ServicesComponent {
       price: '₹10',
       unit: '/ piece',
       features: ['Professional pressing', 'Wrinkle-free finish', 'Steam ironing', 'Careful handling', 'Quick delivery'],
-      buttonText: 'Order Now',
+      buttonText: 'View Pricing',
     },
     {
       title: 'Shoe Cleaning',
@@ -61,7 +71,7 @@ export class ServicesComponent {
       price: '₹150',
       unit: '/ pair',
       features: ['Deep cleaning', 'Odor removal', 'Whitening service', 'Eco-friendly process', '3-day service'],
-      buttonText: 'Order Now',
+      buttonText: 'View Pricing',
     },
     {
       title: 'Bulk Orders',
@@ -73,4 +83,8 @@ export class ServicesComponent {
       isCustomPrice: true,
     },
   ];
+
+  goToPricingPage(){
+    this.router.navigate(['/pricing'])
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './hero-component.html',
   styleUrl: './hero-component.scss',
 })
-export class HeroComponent  {
+export class HeroComponent implements AfterViewInit {
 quickServices = [
     { name: 'Dry Cleaning',  icon: 'dry-clean.svg',  emoji: '👔' },
     { name: 'Wet Cleaning',  icon: 'wet-clean.svg',  emoji: '💧' },
@@ -45,5 +45,17 @@ quickServices = [
     document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right').forEach(el => {
       observer.observe(el);
     });
+  }
+
+  ngAfterViewInit() {
+    const video = document.querySelector('video') as HTMLVideoElement;
+
+    if (video) {
+      video.muted = true;
+      video.loop = true;
+      video.play().catch(err => {
+        console.log('Video play blocked:', err);
+      });
+    }
   }
 }

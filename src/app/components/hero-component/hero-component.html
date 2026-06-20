@@ -1,13 +1,22 @@
 <section id="home" class="hero-section">
+
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="pricing/hero-video-one.mp4?v=1" type="video/mp4">
+  </video>
+
+  <!-- Overlay for readability -->
+  <div class="hero-overlay"></div>
+
   <!-- Decorative background blobs -->
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
 
   <div class="container hero-container">
 
-    <!-- Left Content -->
+    <!-- LEFT CONTENT ONLY GGGGGG-->
     <div class="hero-content fade-in-left">
-      <!-- Sparkle icons (matches reference design) -->
+
       <div class="sparkles">
         <svg class="sparkle sparkle-lg" viewBox="0 0 24 24" fill="#4a9ea1">
           <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/>
@@ -19,91 +28,57 @@
 
       <h1 class="hero-title">
         Your Clothes Deserves Eco-Friendly Care
-        <!-- <span class="highlight">Laundry</span> &amp; Dry Cleaning -->
       </h1>
 
       <p class="hero-description">
-        Experience premium laundry and dry-cleaning with eco-consious
+        Experience premium laundry and dry-cleaning with eco-conscious
         practices. Fast, reliable delivery with certified green solutions that
-        keep your clothes fresh while caring for our planet. 
+        keep your clothes fresh while caring for our planet.
       </p>
 
       <div class="hero-actions">
-        <a href="#contact" class="btn-accent" (click)="scrollTo($event, 'contact')">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
+
+        <a href="#contact"
+           class="btn-accent"
+           (click)="scrollTo($event, 'contact')">
+
           View Pricing
         </a>
-        <a href="#services" class="btn-ghost" (click)="scrollTo($event, 'services')">
+
+        <a href="#services"
+           class="btn-ghost"
+           (click)="scrollTo($event, 'services')">
+
           Find Us
         </a>
+
       </div>
 
-      <!-- Trust Badges -->
-      <div class="trust-badges fade-in-up delay-3">
+      <div class="trust-badges">
+
         <div class="badge-item">
           <span class="badge-number">10+</span>
           <span class="badge-label">Years of Trust</span>
         </div>
+
         <div class="badge-divider"></div>
+
         <div class="badge-item">
           <span class="badge-number">5K+</span>
           <span class="badge-label">Happy Customers</span>
         </div>
+
         <div class="badge-divider"></div>
+
         <div class="badge-item">
           <span class="badge-number">4.9★</span>
           <span class="badge-label">Average Rating</span>
         </div>
-      </div>
-    </div>
 
-    <!-- Right Image -->
-    <div class="hero-image-wrap fade-in-right">
-      <div class="image-card">
-        <img
-          src="hero-laundry.jpg"
-          alt="Professional laundry service"
-          class="hero-img"
-          onerror="this.src='https://placehold.co/480x520/c8eaea/4a9ea1?text=Hero+Image'"
-        />
-        <!-- Floating badge -->
-        <div class="float-badge">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#4a9ea1">
-            <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
-          </svg>
-          <div>
-            <div class="float-badge-title">Same Day</div>
-            <div class="float-badge-sub">Delivery Available</div>
-          </div>
-        </div>
       </div>
 
-      <!-- Decorative dots -->
-      <div class="deco-dots">
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-        <span></span><span></span><span></span>
-      </div>
     </div>
 
   </div>
-
-  <!-- Services quick preview strip -->
-  <!-- <div class="services-strip">
-    <div class="container">
-      <div class="strip-inner">
-        <div class="strip-item" *ngFor="let service of quickServices">
-          <div class="strip-icon">
-            <img [src]="service.icon" [alt]="service.name"
-                 onerror="this.style.display='none'" />
-            <span class="strip-icon-fallback" *ngIf="!service.icon">{{ service.emoji }}</span>
-          </div>
-          <span class="strip-name">{{ service.name }}</span>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
 </section>
