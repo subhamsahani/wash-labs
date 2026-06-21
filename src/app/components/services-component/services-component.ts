@@ -74,7 +74,7 @@ export class ServicesComponent {
       title: 'Roll Polish',
       subtitle: 'ROLL POLISHING',
       description: 'Suitable for saree',
-      icon: 'wash-iron.jpeg',
+      icon: 'roll polish.webp',
       deliveryDays: '3 Days',
       priceUnit: 'saree',
       price: 99,
