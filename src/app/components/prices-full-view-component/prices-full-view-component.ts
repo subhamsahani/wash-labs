@@ -25,18 +25,18 @@ export class PricesFullViewComponent {
     {
       title: 'Wash & Fold',
       description: 'For everyday laundry, wearable clothes only.',
-      deliveryTime: '3 Days (Excluding Pickup Day)',
+      deliveryTime: '2 Days (Excluding Pickup Day)',
       tags: ['WASH', 'FOLD'],
-      pricePerKg: 89,
+      pricePerKg: 69,
       minimumBilling: 399,
       image: 'pricing/clean.png'
     },
     {
-      title: 'Wash & Iron',
+      title: 'Wash & Steam Iron',
       description: 'For wearable laundry that requires ironing.',
       deliveryTime: '3 Days (Excluding Pickup Day)',
-      tags: ['WASH', 'DRY', 'IRONING'],
-      pricePerKg: 129,
+      tags: ['WASH', 'DRY', 'STEAM IRONING'],
+      pricePerKg: 99,
       minimumBilling: 399,
       image: 'pricing/ironing.png'
     },
