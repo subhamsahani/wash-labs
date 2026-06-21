@@ -68,6 +68,28 @@ export class PricesFullViewComponent {
       image: 'pricing/express-delivery.png'
     },
     {
+      title: 'Bedsheets',
+      description: 'Professional washing and sanitization for bedsheets',
+      deliveryTime: '2 Day',
+      tags: ['DEEP CLEAN', 'HYGIENE CARE'],
+      pricePerKg: 129,
+      minimumBilling: 399,
+      image: 'pricing/make-the-bed.png'
+    },
+    {
+      title: 'Blankets',
+      description: 'Expert cleaning and sanitization for blankets',
+      deliveryTime: '2 Day',
+      tags: ['DEEP CLEAN', 'SANITIZED CARE'],
+      image: 'pricing/bed.png',
+      itemPrices: [
+        { item: 'Blanket (Single)', price: 356 },
+        { item: 'Blankets (Double)', price: 448 },
+        { item: 'Quilt (Single)', price: 268 },
+        { item: 'Quilt (Double)', price: 356 },
+      ]
+    },
+    {
       title: "Dry Cleaning - Men's",
       description: 'Waterless solvent cleaning.',
       deliveryTime: '4 Days (Excluding Pickup Day)',
@@ -129,10 +151,10 @@ export class PricesFullViewComponent {
       tags: ['WATERLESS SOLVENT'],
       image: 'pricing/suits.png',
       itemPrices: [
-        { item: 'Blanket/Quilt/Comforter (Single)', price: 119 },
-        { item: 'Blanket/Quilt/Comforter (Double)', price: 119 },
-        { item: 'Bed Sheet (Single)', price: 119 },
-        { item: 'Bed Sheet (Double)', price: 119 },
+        // { item: 'Blanket/Quilt/Comforter (Single)', price: 119 },
+        // { item: 'Blanket/Quilt/Comforter (Double)', price: 119 },
+        // { item: 'Bed Sheet (Single)', price: 119 },
+        // { item: 'Bed Sheet (Double)', price: 119 },
         { item: 'Door Mat', price: 119 },
         { item: 'Sofa cover', price: 119 },
         { item: 'Shoes', price: 119 },
@@ -148,6 +170,7 @@ export class PricesFullViewComponent {
         { item: 'Trolly Bag/Bags', price: 119 },
         
       ]
-    }
+    },
+    
   ];
 }

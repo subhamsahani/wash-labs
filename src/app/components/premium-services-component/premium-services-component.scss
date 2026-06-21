@@ -6,6 +6,8 @@ $text-muted: #4a6670;
 .premium-section {
 //   background-color: #dff0eb;
   background-color: #fff;
+  background-image: "commercial-laundry.jpg";
+  border-radius: 16px;
 }
 
 // ── Header ───────────────────────────────────────────────
@@ -24,7 +26,8 @@ $text-muted: #4a6670;
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 800;
-  color: $text-dark;
+  // color: $text-dark;
+  color: #fff;
 
   .highlight {
     color: $green;
@@ -32,7 +35,7 @@ $text-muted: #4a6670;
 }
 
 .section-subtitle {
-  color: $text-muted;
+  color: $green;
   font-size: 0.95rem;
   max-width: 440px;
   margin: 0 auto;

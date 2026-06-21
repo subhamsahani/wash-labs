@@ -38,7 +38,8 @@ export class LocationComponent {
   }
 
   openWhatsApp(): void {
-    const number = this.branch.phone.replace(/\s+/g, '').replace('+', '');
+    const phone = '+91 8147751900';
+    const number = phone.replace(/\D/g, ''); // removes everything except digits
     window.open(`https://wa.me/${number}`, '_blank');
   }
 }
