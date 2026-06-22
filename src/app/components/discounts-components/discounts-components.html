@@ -1,0 +1,76 @@
+<section id="discounts" class="discounts-section py-5">
+  <div class="container">
+
+    <div class="text-center mb-3">
+      <span class="section-eyebrow">
+        <i class="bi bi-piggy-bank me-1"></i> Save More
+      </span>
+      <h2 class="section-title mt-3">
+        Premium quality with <span class="highlight">huge savings</span>
+      </h2>
+      <p class="section-subtitle">
+        Top up your wallet once and enjoy bigger discounts on every wash, fold and dry-clean —
+        the more you recharge, the more you save.
+      </p>
+    </div>
+
+    <p class="packages-label">Packages</p>
+
+    <div class="row g-4">
+      @for (plan of plans; track plan.tier) {
+        <div class="col-12 col-md-6 col-lg-4">
+          <div
+            class="discount-card"
+            [class.featured-card]="plan.isFeatured"
+            [attr.data-tier]="plan.tier.toLowerCase()">
+
+            @if (plan.isFeatured) {
+              <div class="featured-badge">BEST VALUE</div>
+            }
+
+            <div class="discount-icon-wrap">
+              <i class="bi {{ plan.icon }}"></i>
+            </div>
+
+            <h5 class="discount-tier">{{ plan.tier }} Discount</h5>
+            <p class="discount-tagline">{{ plan.tagline }}</p>
+
+            <div class="amount-row">
+              <div class="amount-block">
+                <span class="amount-label">Buy</span>
+                <span class="amount-value">₹{{ plan.buyAmount }}</span>
+              </div>
+
+              <i class="bi bi-arrow-right amount-arrow"></i>
+
+              <div class="amount-block">
+                <span class="amount-label">Get</span>
+                <span class="amount-value get-value">₹{{ plan.getAmount }}</span>
+              </div>
+            </div>
+
+            <div class="bonus-chip">
+              <i class="bi bi-gift-fill"></i> +₹{{ plan.bonusAmount }} Bonus ({{ plan.bonusPercent }}% extra)
+            </div>
+
+            <div class="card-divider"></div>
+
+            <!-- <ul class="feature-list">
+              @for (feature of plan.features; track feature) {
+                <li class="feature-item">
+                  <span class="check-icon">✓</span> {{ feature }}
+                </li>
+              }
+            </ul> -->
+
+            <button class="discount-btn w-100">
+              Avail Offer
+            </button>
+
+          </div>
+        </div>
+      }
+    </div>
+
+  </div>
+</section>

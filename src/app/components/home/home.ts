@@ -8,6 +8,7 @@ import { PremiumServicesComponent } from '../../components/premium-services-comp
 import { ContactComponent } from '../../components/contact-component/contact-component';
 import { FooterComponent } from '../../components/footer-component/footer-component';
 import { FaqComponent } from '../faq-component/faq-component';
+import { DiscountsComponents } from '../discounts-components/discounts-components';
 
 @Component({
   selector: 'app-home',
@@ -20,7 +21,8 @@ import { FaqComponent } from '../faq-component/faq-component';
     PremiumServicesComponent,
     ContactComponent,
     FooterComponent,
-    FaqComponent
+    FaqComponent,
+    DiscountsComponents
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss'

@@ -1,0 +1,272 @@
+$green: #2ec4a0;
+$green-dark: #25a888;
+$text-dark: #1a2332;
+$text-muted: #6b8088;
+$border-light: #e3eeec;
+
+$silver: #6b8aa3;        // cool slate-blue, matches "Silver"
+$silver-light: #e6edf2;
+$gold: #c98a1f;          // warm amber, matches "Gold"
+$gold-light: #fdf1dd;
+
+.discounts-section {
+//   background-color: #f8fbfa;
+  background-color: #fff;
+}
+
+// ── Header ─────────────────────────────────────────────
+.section-eyebrow {
+  display: inline-block;
+  border: 1.5px solid $green;
+  color: $green;
+  border-radius: 999px;
+  padding: 4px 16px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  background-color: rgba(46, 196, 160, 0.08);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: $text-dark;
+
+  .highlight {
+    color: $green;
+  }
+}
+
+.section-subtitle {
+  color: $text-muted;
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.packages-label {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: $green;
+  margin: 1.5rem 0 2rem;
+
+  &::before,
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background: $border-light;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+// ── Card ───────────────────────────────────────────────
+.discount-card {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  border: 1px solid $border-light;
+  padding: 32px 24px 24px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 16px rgba(30, 120, 100, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(30, 120, 100, 0.14);
+  }
+
+  &.featured-card {
+    border: 1.5px solid $gold;
+    box-shadow: 0 6px 28px rgba(201, 138, 31, 0.22);
+  }
+}
+
+.featured-badge {
+  position: absolute;
+  top: 14px;
+  right: -1px;
+  background: $gold;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 3px 12px;
+  border-radius: 4px 0 0 4px;
+}
+
+// ── Icon ───────────────────────────────────────────────
+.discount-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  background-color: rgba(46, 196, 160, 0.1);
+  color: $green;
+  font-size: 1.5rem;
+}
+
+.discount-card[data-tier='silver'] .discount-icon-wrap {
+  background-color: $silver-light;
+  color: $silver;
+}
+
+.discount-card[data-tier='gold'] .discount-icon-wrap {
+  background-color: $gold-light;
+  color: $gold;
+}
+
+// ── Text ───────────────────────────────────────────────
+.discount-tier {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: $text-dark;
+  margin-bottom: 4px;
+}
+
+.discount-tagline {
+  font-size: 0.85rem;
+  color: $text-muted;
+  margin-bottom: 20px;
+}
+
+// ── Amounts ──────────────────────────────────────────────
+.amount-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.amount-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.amount-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $text-muted;
+  margin-bottom: 2px;
+}
+
+.amount-value {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: $text-dark;
+
+  &.get-value {
+    color: $green;
+    font-size: 1.6rem;
+  }
+}
+
+.discount-card[data-tier='silver'] .get-value { color: $silver; }
+.discount-card[data-tier='gold'] .get-value { color: $gold; }
+
+.amount-arrow {
+  color: $text-muted;
+  font-size: 1rem;
+  margin-top: 14px;
+}
+
+// ── Bonus chip ───────────────────────────────────────────
+.bonus-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: center;
+  background-color: rgba(46, 196, 160, 0.1);
+  color: $green-dark;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin: 0 auto 20px;
+}
+
+.discount-card[data-tier='silver'] .bonus-chip {
+  background-color: $silver-light;
+  color: $silver;
+}
+
+.discount-card[data-tier='gold'] .bonus-chip {
+  background-color: $gold-light;
+  color: $gold;
+}
+
+.card-divider {
+  height: 1px;
+  background-color: $border-light;
+  margin-bottom: 18px;
+}
+
+// ── Feature list ─────────────────────────────────────────
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  flex: 1;
+  text-align: left;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 0.85rem;
+  color: $text-dark;
+}
+
+.check-icon {
+  color: $green;
+  font-weight: 700;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.discount-card[data-tier='silver'] .check-icon { color: $silver; }
+.discount-card[data-tier='gold'] .check-icon { color: $gold; }
+
+// ── Button ───────────────────────────────────────────────
+.discount-btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  background-color: $green;
+  color: #fff;
+  margin-top: auto;
+
+  &:hover {
+    background-color: $green-dark;
+  }
+}
+
+.discount-card[data-tier='silver'] .discount-btn {
+  background-color: $silver;
+  &:hover { background-color: darken($silver, 8%); }
+}
+
+.discount-card[data-tier='gold'] .discount-btn {
+  background-color: $gold;
+  &:hover { background-color: darken($gold, 8%); }
+}

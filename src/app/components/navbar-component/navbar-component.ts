@@ -16,6 +16,7 @@ export class NavbarComponent {
     { label: 'Services', route: 'services' },
     { label: 'Location', route: 'location' },
     { label: 'Premium', route: 'premium' },
+    { label: 'Discount', route: 'discount' },
     { label: 'Contact', route: 'contact' },
     { label: 'FAQ', route: 'faq' },
   ];
