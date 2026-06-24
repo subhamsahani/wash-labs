@@ -14,9 +14,9 @@ export class NavbarComponent {
   navItems = [
     { label: 'Home', route: 'home' },
     { label: 'Services', route: 'services' },
+    { label: 'Discount', route: 'discount' },
     { label: 'Location', route: 'location' },
     { label: 'Premium', route: 'premium' },
-    { label: 'Discount', route: 'discount' },
     { label: 'Contact', route: 'contact' },
     { label: 'FAQ', route: 'faq' },
   ];
